@@ -32,6 +32,7 @@ func reader(ch <-chan int) {
 
 func main() {
 	workersCount := flag.Int("workers", runtime.GOMAXPROCS(0), "Number of workers")
+	flag.Parse()
 
 	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, syscall.SIGINT, syscall.SIGTERM)
