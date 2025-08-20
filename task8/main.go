@@ -10,11 +10,9 @@ func swapBits(num int64, bitPos int, bitToSet int) {
 	case 0:
 		num = num & ^int64(1<<(bitPos-1))
 		println(num)
-		break
 	case 1:
 		num = num | int64(1<<(bitPos-1))
 		println(num)
-		break
 	default:
 		println("bitToSet out of range")
 	}
